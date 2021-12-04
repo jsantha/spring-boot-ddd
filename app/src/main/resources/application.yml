@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: santha
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    mapping-resources:
+      - hibernate/user.hbm.xml
+      - hibernate/userregistration.hbm.xml
+
+logging:
+  level:
+    com.santha: TRACE
+    org.hibernate.SQL: DEBUG
+#    org.springframework.transaction: TRACE
+#    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.hibernate.engine.transaction: DEBUG
